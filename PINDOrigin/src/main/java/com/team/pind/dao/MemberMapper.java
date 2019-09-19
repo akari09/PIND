@@ -20,11 +20,11 @@ public interface MemberMapper {
 	
 	public MemberVO Memberchk(@Param("pind_mem_Email") String pind_mem_Email, @Param("pind_mem_Joincommit") String pind_mem_Joincommit);
 	
-	//프로필 이미지 등록
-	public void insertProfile(ProfileVO pro);
-		
-	//프로필 이미지 가져오기
-	public String getProfile(String logId);
+//	//프로필 이미지 등록
+//	public void insertProfile(ProfileVO pro);
+//		
+//	//프로필 이미지 가져오기
+//	public String getProfile(String logId);
 	
 	//회원 가입 시 mCategory에 회원 정보 넣기 
 	public void makeCategory(String pind_mem_Email);

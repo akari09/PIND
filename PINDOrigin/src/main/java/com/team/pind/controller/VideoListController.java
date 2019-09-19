@@ -50,8 +50,8 @@ public class VideoListController {
 				map.put("cg", video.getPind_mCategory());
 				dao.category(map);
 						
-				String savedfile = mdao.getProfile(id);
-				model.addAttribute("profile", savedfile);
+//				String savedfile = mdao.getProfile(id);
+//				model.addAttribute("profile", savedfile);
 						
 				}
 					

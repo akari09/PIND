@@ -74,22 +74,22 @@ public class MemberDAO implements MemberMapper{
 		return mem;
 	}
 	
-	//추가 : 프로필 이미지 등록
-		public void insertProfile(ProfileVO pro) {
-			MemberMapper mapper = sqlsession.getMapper(MemberMapper.class);
-			
-			mapper.insertProfile(pro);
+//	//추가 : 프로필 이미지 등록
+//		public void insertProfile(ProfileVO pro) {
+//			MemberMapper mapper = sqlsession.getMapper(MemberMapper.class);
+//			
+//			mapper.insertProfile(pro);
+//		
+//		}
 		
-		}
-		
-		//추가 : 프로필 이미지 가져오기
-		public String getProfile(String logId) {
-			MemberMapper mapper = sqlsession.getMapper(MemberMapper.class);
-			
-			String savedfile = mapper.getProfile(logId);
-			
-			return savedfile;
-		}
+//		//추가 : 프로필 이미지 가져오기
+//		public String getProfile(String logId) {
+//			MemberMapper mapper = sqlsession.getMapper(MemberMapper.class);
+//			
+//			String savedfile = mapper.getProfile(logId);
+//			
+//			return savedfile;
+//		}
 		
 		//가입 시 mCategory 테이블에 사용자 정보 넣어주기  
 		public void makeCategory(String pind_mem_Email) {

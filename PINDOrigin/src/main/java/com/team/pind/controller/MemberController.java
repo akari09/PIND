@@ -98,9 +98,6 @@ public class MemberController {
 				session.setAttribute("logId", email);
 				session.setAttribute("joinCommit", mem.getPind_mem_Joincommit());
 				session.setAttribute("logNickname", mem.getPind_mem_Nickname());
-				String savedfile = dao.getProfile(email);
-				
-				session.setAttribute("logProfile", savedfile);
 					
 				return "redirect:/";
 			} else {
@@ -144,7 +141,7 @@ public class MemberController {
 					pro.setPind_mem_Email(logId);
 					pro.setPind_image_savedfile(savedfile);
 					
-					dao.insertProfile(pro);
+//					dao.insertProfile(pro);
 				}
 				
 				return "redirect:/";

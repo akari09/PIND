@@ -57,7 +57,9 @@
 	
 	   function prosubmit(){
 		   $('#profrm').submit();
-		   document.reload();
+		   setTimeout(function(){
+			   location.reload();
+		   }, 2000);
 	   }
 	
 	</script>
@@ -143,6 +145,7 @@
 		            </li>
 		            <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
 		               <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		               
 		               <img src="profileImage/${sessionScope.logId}.png" onerror="this.src='profileImage/default2.png'">
 		               ${sessionScope.logNickname}
 		               </a>

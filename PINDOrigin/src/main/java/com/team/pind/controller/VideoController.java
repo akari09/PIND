@@ -40,7 +40,7 @@ public class VideoController {
 	
 
 	@RequestMapping(value = "uploadDetail", method = RequestMethod.POST)
-	public String detailUp(MultipartFile upload, HttpServletRequest request,Model m, String pind_video_Title, String pind_video_About, String pind_mCategory, String pind_video_savedfile, @RequestParam(value = "pind_video_date", defaultValue = "0")  String pind_video_date) {
+	public String detailUp(MultipartFile upload, HttpServletRequest request, String pind_video_Title, String pind_video_About, String pind_mCategory, String pind_video_savedfile, @RequestParam(value = "pind_video_date", defaultValue = "0")  String pind_video_date) {
 		VideoVO vVO = new VideoVO();
 		
 		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
@@ -52,9 +52,8 @@ public class VideoController {
 			if (!upload.isEmpty()) {
 		String rootPath = request.getSession().getServletContext().getRealPath("/");
 		String uploadPath = rootPath +"resources/videoImage";
-		String pind_video_Img = FileService2.saveFile2(upload, uploadPath, vVO.getPind_video_Num());
+		FileService2.saveFile2(upload, uploadPath, vVO.getPind_video_Num());
 			
-		m.addAttribute("imgUrl", pind_video_Img);
 	}
 		dao.updateVideo(pind_video_Title, pind_video_About, pind_mCategory, vVO.getPind_video_Num());
 		return "redirect:/";

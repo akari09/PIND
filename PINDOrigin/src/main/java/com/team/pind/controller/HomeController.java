@@ -52,8 +52,8 @@ public class HomeController {
 				model.addAttribute("clist", map.get("clist"));
 				model.addAttribute("favCg", map.get("favCg"));
 				
-				String savedfile = mdao.getProfile(id);
-				model.addAttribute("profile", savedfile);
+//				String savedfile = mdao.getProfile(id);
+//				model.addAttribute("profile", savedfile);
 			}
 
 			Collections.shuffle(vlist);
