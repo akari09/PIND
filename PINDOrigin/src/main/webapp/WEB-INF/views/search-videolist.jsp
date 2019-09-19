@@ -115,7 +115,7 @@
 		            </li>
 		            <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
 		               <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		               <img src="profileImage/${sessionScope.logId}.png" onerror="this.src='profileImage/default2.png'">
+		               <img src="profileImage/${sessionScope.logId}.png" onerror="this.src='profileImage/default.png'">
 		               ${sessionScope.logNickname}
 		               </a>
 		               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">

@@ -53,6 +53,13 @@ text-decoration: underline;
 		      location.href='deleteHistory?deleHis='+deleHis;      
 		  }
 		}
+	  
+	   function prosubmit(){
+		   $('#profrm').submit();
+		   setTimeout(function(){
+			   location.reload();
+		   }, 1000);
+	   }
   
   </script>
       
