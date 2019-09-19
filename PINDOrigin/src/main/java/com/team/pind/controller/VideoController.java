@@ -47,8 +47,17 @@ public class VideoController {
 		Calendar time = Calendar.getInstance();
 		pind_video_date = format.format(time.getTime());
 		String[] saved = pind_video_savedfile.split("\\.");
-		vVO = dao.selectVideo(saved[0], pind_video_date);
-		
+		String savedRs = "";
+		for(int i = 0; i<saved.length-1; i++){
+			if(i == (saved.length-2)){
+				savedRs += saved[i];
+			}else{
+				savedRs += saved[i]+".";
+			}
+		}
+		vVO = dao.selectVideo(savedRs, pind_video_date);
+		System.out.println(savedRs);
+		System.out.println(pind_video_date);
 			if (!upload.isEmpty()) {
 		String rootPath = request.getSession().getServletContext().getRealPath("/");
 		String uploadPath = rootPath +"resources/videoImage";
