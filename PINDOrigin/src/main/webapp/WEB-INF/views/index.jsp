@@ -58,6 +58,7 @@
 	   function prosubmit(){
 		   $('#profrm').submit();
 		   setTimeout(function(){
+			   alert('Profile Update!');
 			   location.reload();
 		   }, 1000);
 	   }

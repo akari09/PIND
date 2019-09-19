@@ -366,9 +366,12 @@
     		}
       
       function prosubmit(){
-   	   $('#profrm').submit();
-   	   document.reload();
-      }
+		   $('#profrm').submit();
+		   setTimeout(function(){
+			   alert('Profile Update!');
+			   location.reload();
+		   }, 1000);
+	   }
       </script>
    </body>
 </html>

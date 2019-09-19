@@ -28,9 +28,12 @@
 		$('.show-video'+num).css('display', 'none');
 	}
 	
-	   function prosubmit(){
+	function prosubmit(){
 		   $('#profrm').submit();
-		   document.reload();
+		   setTimeout(function(){
+			   alert('Profile Update!');
+			   location.reload();
+		   }, 1000);
 	   }
 	</script>
       

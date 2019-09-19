@@ -54,9 +54,10 @@ text-decoration: underline;
 		  }
 		}
 	  
-	   function prosubmit(){
+	  function prosubmit(){
 		   $('#profrm').submit();
 		   setTimeout(function(){
+			   alert('Profile Update!');
 			   location.reload();
 		   }, 1000);
 	   }
